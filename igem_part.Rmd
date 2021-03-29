@@ -1,0 +1,126 @@
+---
+title: "igem_part.Rmd"
+output: html_document
+---
+
+
+```{r}
+no <- c(1,2)
+team_name <- c("TU_Kaiserslautern",
+               "Rice")
+project_title <- c("Revolutionizing plastic degradation by introducing Chlamydomonas reinhardtii as a eukaryotic secretion platform",
+                   "Expand the range of synthetic biology applications by developing tools which would facilitate the expression of genetic constructs in a wider variety of strains")
+project_year <- c(2019,
+                  2018)
+wiki_page <- c("https://2019.igem.org/Team:TU_Kaiserslautern",
+               "http://2018.igem.org/Team:Rice")
+igem_team <- data.frame(no, 
+                        team_name, 
+                        project_title, 
+                        project_year, 
+                        wiki_page)
+#knitr::kable(std, format = "markdown")
+knitr::kable(igem_team)
+```
+```{r}
+no <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+part_id <- c("BBa_K3002000",
+             "BBa_K3002004",
+             "BBa_K3002100",
+             "BBa_K3002101",
+             "BBa_K3002007",
+             "BBa_K3002008",
+             "BBa_K3002001",
+             "BBa_K3002003",
+             "BBa_K3002301",
+             "BBa_K3002302",
+             "BBa_K3002017",
+             "BBa_K3002018",
+             "BBa_K3002002",
+             "BBa_K3002006")
+part_name <- c("Spectinomycin Resistance for Chlamydomonas reinhardtii (Phytobrick)",
+               "Wildtype PETase for Chlamydomonas reinhardtii (Phytobrick)",
+               "Level 1 - Mutant PETase + cCA + SP20 HA (Phytobrick)",
+               "Level 1 -- Mutant PETase + HA (Phytobrick)",
+               "cCA secretion signal for Chlamydomonas reinhardtii (Phytobrick)",
+               "GLE secretion signal for Chlamydomonas reinhardtii (Phytobrick)",
+               "PSAD promoter for Chlamydomonas reinhardtii (Phytobrick)",
+               "pAR promoter for Chlamydomonas reinhardtii (Phytobrick)",
+               "MoClo connector A3-B1 Dorothée Klein",
+               "MoClo connector B1-B2 Marlene Schlosser",
+               "3xHA tag for Chlamydomonas reinhardtii (Phytobrick)",
+               "Sp20 8xHis tag for Chlamydomonas reinhardtii (Phytobrick)",
+               "PSAD terminator for Chlamydomonas reinhardtii (Phytobrick)",
+               "RPL23 terminator for Chlamydomonas reinhardtii (Phytobrick)")
+part_type <- c("Coding",
+               "Coding",
+               "Composite",
+               "Composite",
+               "Protein_Domain",
+               "Protein_Domain",
+               "Regulatory",
+               "Regulatory",
+               "Scar",
+               "Scar",
+               "Tag",
+               "Tag",
+               "Terminator",
+               "Terminator")
+team_id <- c(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+
+igem_part <- data.frame(no,
+                        part_id,
+                        part_name,
+                        part_type,
+                        team_id)
+
+knitr::kable(igem_part)
+
+               
+```
+
+```{r}
+no <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+part_id <- c("BBa_K2540011",
+             "BBa_K2540010",
+             "BBa_K2540002",
+             "BBa_K2540004",
+             "BBa_K2540003",
+             "BBa_K2540001",
+             "BBa_K2540012",
+             "BBa_K2540006",
+             "BBa_K2540007",
+             "BBa_K2540009",
+             "BBa_K2540015")
+part_name <- c("Universal bacterial expression resource (UBER)",
+               "Broad host range regulatory elements",
+               "Broad host range regulatory elements",
+               "Broad host range regulatory elements",
+               "Broad host range regulatory elements",
+               "Broad host range regulatory elements",
+               "Broad host range regulatory elements",
+               "Broad host range regulatory elements",
+               "Broad host range regulatory elements",
+               "Broad host range regulatory elements",
+               "Orthogonal ribosome binding site")
+part_type <- c("basic",
+               "basic",
+               "basic",
+               "basic",
+               "basic",
+               "basic",
+               "basic",
+               "basic",
+               "basic",
+               "basic",
+               "basic")
+team_id <- c(2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2)
+igem_part <- data.frame(no,
+                        part_id, 
+                        part_name,
+                        part_type, 
+                        team_id)
+
+knitr::kable(igem_part)
+```
+
