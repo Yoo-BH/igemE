@@ -1,0 +1,170 @@
+---
+title: "Promoter.Rmd"
+output: html_document
+---
+
+```{r}
+no <- c(1)
+team_name <- c("BOKU-Vienna")
+project_title <- c("help people dealing with sepsis caused by Lipopolysaccharides (LPS) from gram-negative bacteria lysis.")
+                
+project_year <- c(2020) 
+                  
+wiki_page <- c("https://2020.igem.org/Team:BOKU-Vienna")
+ 
+
+igem_team <- data.frame(no, 
+                        team_name, 
+                        project_title, 
+                        project_year, 
+                        wiki_page)
+#knitr::kable(std, format = "markdown")
+knitr::kable(igem_team)
+```
+```{r}
+no <- c(1, 2, 3, 4, 5)
+
+part_id <- c("BBa_J23101", 
+             "BBa_J23105",
+             "BBa_J23109",
+             "BBa_B1001",
+             "BBa_J06504")
+part_name <- c("constitutive promoter family member",
+               "constitutive promoter family member",
+               "constitutive promoter family member",
+               "Small, artificial terminator",
+               "mCherry, Red Fluorescent protein")
+part_type <- c("Regulatory",
+               "Regulatory",
+               "Regulatory",
+               "Terminator",
+               "Reporter mCherry")
+
+
+igem_part <- data.frame(no,
+                        part_id, 
+                        part_name,
+                        part_type) 
+                        
+
+knitr::kable(igem_part)
+```
+### 회로 만드는 프로토콜 정보 (Golden Gate Cloning)
+
+Materials
+
+* Plasmids of interest
+
+* Cutsmart buffer
+
+* ATP
+
+* Restriction enzymes
+
+* T4 ligase
+
+* H20
+
+Master mix preparation
+```{r}
+Compononet <-c("Insert 01",
+               "Insert 02",
+               "Plasmide Backbone 03",
+               "Cutsmart buffer",
+               "ATP",
+               "restriction enzyme",
+               "T4 ligase",
+               "H20",
+               "Total volume")
+sample <-c("1",
+              "1",
+              "1",
+              "2",
+              "2",
+              "2",
+              "0.25",
+              "9.75",
+              "20")
+Mastermix <-c("5",
+              "5",
+              "5",
+              "10",
+              "10",
+              "10",
+              "1.25",
+              "48.25",
+              "")
+igem_part <- data.frame(Compononet,
+                        sample, 
+                        Mastermix)
+                         
+                        
+
+knitr::kable(igem_part)
+                
+            
+```
+The amount of water added can be variable based on the amount of different inserts used in cloning. In general the H2O should be used to bring the total volume up to 20 uL.
+
+
+Thermocycler protocol GoldenGateshort:
+40 cycles:
+
+* 37°C - 1 min
+
+* 16°C - 2.5 min
+
+1 cycle:
+
+* 37°C - 30 min
+
+* 50°C - 5 min
+
+* 80°C - 10 min
+
+* 20°C - 2 min
+
+Protocol
+
+1. Prepare a master mix of all components except the new backbone
+
+2. Pipette 19 uL of the master mix into separate eppies
+
+3. Add 1 uL of DNA solution to the Mastermix.
+
+4. Place the reaction tubes into the thermo cycler with the described programme
+
+
+
+
+### 리포터 발현 배양/실험 조건 및 측정 방법
+The measured fluorescence is presented in fluorescence units [FU]
+
+Fluorescence of mCherry at assay
+```{r}
+Time_h <-c("1.3",
+           "2.8",
+           "4.8",
+           "8.0")
+a <-c("8.0",
+        "7.5",
+        "28.0",
+        "57.0")
+b <-c("6.5",
+        "6.5",
+        "6.5",
+        "14.0")
+c <-c("6.0",
+        "6.0",
+        "6.0",
+        "7.0")
+        
+Fluorescence <-data.frame(Time_h,
+                          a,
+                          b,
+                          c)
+knitr::kable(Fluorescence)
+```
+
+![result](http://192.168.122.155:8787/files/ResarchE-user07/files/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EC%9D%8C.png){1}
+
