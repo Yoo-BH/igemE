@@ -13,7 +13,7 @@ year <- c(2020)
 wiki <- c("https://2020.igem.org/Team:BOKU-Vienna")
  
 
-igem_team <- data.frame(no, 
+igem_team <- data.frame(id, 
                         team_name, 
                         project, 
                         year, 
@@ -51,7 +51,7 @@ id <- c(1:4)
 promoter <- c("BBa_J23101", "BBa_J23101", "BBa_J23105", "BBa_J23105")
 indc <- rep("Time", length(id))
 Time <- c(5, 7, 5, 7)
-value <- c(950, 1350, 10,20 )
+value <- c(950, 1350, 10, 20)
 valunit <- rep("Fluorescence", length(id))
 incubhr <- rep("8", length(id))
 incubtemp <- rep("-", length(id))
@@ -60,6 +60,7 @@ link <- c("https://2020.igem.org/Team:BOKU-Vienna/Results",
           "https://2020.igem.org/Team:BOKU-Vienna/Results",
           "https://2020.igem.org/Team:BOKU-Vienna/Results",
           "https://2020.igem.org/Team:BOKU-Vienna/Results")
+          
 igem_obs <- data.frame(id, promoter, indc, Time, value,
                         valunit, incubhr, incubtemp,
                        device_id, link)
