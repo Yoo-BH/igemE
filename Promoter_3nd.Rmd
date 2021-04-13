@@ -1,0 +1,163 @@
+---
+title: "Promoter_3nd"
+output: html_document
+---
+
+```{r}
+igem_team <- data.frame(id = "1",
+             team_name = "Baltimore_BioCrew",
+             project = "To repopulate the microbiome after antibiotic treatment which in turn, will fortify the gut against bacterial disease.",
+             year = "2019",
+             wiki = "https://2019.igem.org/Team:Baltimore_BioCrew")
+```
+
+```{r}
+igem_part <- data.frame(id = 1:4,
+             BBid = c("BBa_J23101", 
+          "BBa_J23105",
+          "BBa_B1001",
+          "BBa_J06504"),
+             type = c("Promoter",
+          "Promoter",
+          "Terminator",
+          "Reporter mCherry"),
+             link = c("http://parts.igem.org/Part:BBa_J23101",
+          "http://parts.igem.org/Part:BBa_J23105",
+          "http://parts.igem.org/Part:BBa_B1001",
+          "http://parts.igem.org/Part:BBa_J06504"),
+             backbone = rep("-", 4),
+             device_id = paste0("D", sprintf("%04d", rep(1, 4))),
+             team_name = rep("Baltimore_BioCrew", 4),
+             user = rep("yoo-bh", 4))
+igem_part
+```
+
+```{r}
+id <- c(1:4)
+promoter <- c("BBa_J23101", "BBa_J23101", "BBa_J23105", "BBa_J23105")
+indc <- rep("copy number", length(id))
+copy <- c(20, 500, 20, 500)
+value <- c(500, 1000, 50, 100)
+valunit <- rep("Fluorescence", length(id))
+incubhr <- rep("-", length(id))
+incubtemp <- rep("-", length(id))
+device_id <- rep("D0001", length(id))
+link <- c("http://2018.igem.org/Team:GreatBay_China/Demonstrate",
+         "http://2018.igem.org/Team:GreatBay_China/Demonstrate",
+          "http://2018.igem.org/Team:GreatBay_China/Demonstrate",
+          "http://2018.igem.org/Team:GreatBay_China/Demonstrate")
+          
+igem_obs <- data.frame(id, promoter, indc, copy, value,
+                        valunit, incubhr, incubtemp,
+                       device_id, link)
+#knitr::kable(igem_obs)
+igem_obs
+```
+```{r}
+library(tidyverse)
+id <- c("1")
+team_name <- c("BOKU-Vienna")
+project <- c("help people dealing with sepsis caused by Lipopolysaccharides (LPS) from gram-negative bacteria lysis")
+year <- c("2020")
+wiki <- c("https://2020.igem.org/Team:BOKU-Vienna")
+
+igem_team1 <- data.frame(id, 
+                        team_name, 
+                        project, 
+                        year, 
+                        wiki)
+
+igem_team2 <- data.frame(id = "1",
+             team_name = "Baltimore_BioCrew",
+             project = "To repopulate the microbiome after antibiotic treatment which in turn, will fortify the gut against bacterial disease.",
+             year = "2019",
+             wiki = "https://2019.igem.org/Team:Baltimore_BioCrew")
+
+bind_rows(igem_team1, igem_team2, .id="id")
+```
+
+```{r}
+id <- 1:4
+BBid <- c("BBa_J23101", 
+          "BBa_J23105",
+          "BBa_B1001",
+          "BBa_J06504")
+type <- c("Promoter",
+          "Promoter",
+          "Terminator",
+          "Reporter mCherry")
+link <- c("http://parts.igem.org/Part:BBa_J23101",
+          "http://parts.igem.org/Part:BBa_J23105",
+          "http://parts.igem.org/Part:BBa_B1001",
+          "http://parts.igem.org/Part:BBa_J06504")
+backbone <- rep("-", length(id))
+device_id <- paste0("D", sprintf("%04d", rep(1, length(id))) )
+team_name <- rep("BOKU-Vienna", length(id))
+user <- rep("yoo-bh", length(id))
+
+igem_part  <- data.frame(id, BBid, type, link, backbone, device_id, team_name, user)
+
+igem_part2 <- data.frame(id = 1:4,
+             BBid = c("BBa_J23101", 
+          "BBa_J23105",
+          "BBa_B1001",
+          "BBa_J06504"),
+             type = c("Promoter",
+          "Promoter",
+          "Terminator",
+          "Reporter mCherry"),
+             link = c("http://parts.igem.org/Part:BBa_J23101",
+          "http://parts.igem.org/Part:BBa_J23105",
+          "http://parts.igem.org/Part:BBa_B1001",
+          "http://parts.igem.org/Part:BBa_J06504"),
+             backbone = rep("-", 4),
+             device_id = paste0("D", sprintf("%04d", rep(1, 4))),
+             team_name = rep("Baltimore_BioCrew", 4),
+             user = rep("yoo-bh", 4))
+igem_part2
+```
+```{r}
+igem_part <- bind_rows(igem_part, igem_part2, .id="id")
+igem_part
+```
+
+```{r}
+id <- c(1:4)
+promoter <- c("BBa_J23101", "BBa_J23101", "BBa_J23105", "BBa_J23105")
+indc <- rep("Time", length(id))
+Time <- c(5, 7, 5, 7)
+value <- c(950, 1350, 10, 20)
+valunit <- rep("Fluorescence", length(id))
+incubhr <- rep("8", length(id))
+incubtemp <- rep("-", length(id))
+device_id <- rep("D0001", length(id))
+link <- c("https://2020.igem.org/Team:BOKU-Vienna/Results",
+          "https://2020.igem.org/Team:BOKU-Vienna/Results",
+          "https://2020.igem.org/Team:BOKU-Vienna/Results",
+          "https://2020.igem.org/Team:BOKU-Vienna/Results")
+igem_obs <- data.frame(id, promoter, indc, Time, value,
+                        valunit, incubhr, incubtemp,
+                       device_id, link)
+
+id <- c(1:4)
+promoter <- c("BBa_J23101", "BBa_J23101", "BBa_J23105", "BBa_J23105")
+indc <- rep("copy number", length(id))
+copy <- c(20, 500, 20, 500)
+value <- c(500, 1000, 50, 100)
+valunit <- rep("Fluorescence", length(id))
+incubhr <- rep("-", length(id))
+incubtemp <- rep("-", length(id))
+device_id <- rep("D0001", length(id))
+link <- c("http://2018.igem.org/Team:GreatBay_China/Demonstrate",
+         "http://2018.igem.org/Team:GreatBay_China/Demonstrate",
+          "http://2018.igem.org/Team:GreatBay_China/Demonstrate",
+          "http://2018.igem.org/Team:GreatBay_China/Demonstrate")
+          
+igem_obs2 <- data.frame(id, promoter, indc, copy, value,
+                        valunit, incubhr, incubtemp,
+                       device_id, link)
+#knitr::kable(igem_obs)
+igem_obs <- bind_rows(igem_obs, igem_obs2, .id="id")
+igem_obs
+```
+
