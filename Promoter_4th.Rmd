@@ -1,0 +1,16 @@
+---
+title: "Untitled"
+output: html_document
+---
+
+```{r}
+library(readxl)
+
+igem_team <- read_excel("igem_team.xlsx", sheet=1, skip = 0, col_names=T)
+igem_promoter <-read_excel("igem_promoter.xlsx", sheet=1, skip = 0, col_names=T)
+igem_obs <- read_excel("igem_obs.xlsx", sheet=1, skip = 0, col_names=T)
+igem_team
+igem_promoter
+igem_obs
+```
+
